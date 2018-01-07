@@ -140,7 +140,7 @@ DEPENDENCIES
   faker (= 1.1.2)
   jbuilder (= 1.5.3)
   jquery-rails (= 3.1.2)
-  paperclip
+  paperclip (= 4.3.7)
   rails (= 4.0.5)
   sass-rails (= 4.0.3)
   sprockets (= 2.11.0)

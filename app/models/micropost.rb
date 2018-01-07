@@ -9,6 +9,8 @@ class Micropost < ActiveRecord::Base
   
   #  画像の拡張子を限定するためのvalidatorを定義
   validates_attachment_content_type :image, :content_type => %w(image/jpeg image/jpg image/png image/gif)
+  
+  validates_with AttachmentSizeValidator, attributes: :image, less_than: 3.megabytes
 
   def self.from_users_followed_by(user)
     followed_user_ids = "SELECT followed_id FROM relationships
